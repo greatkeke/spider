@@ -1,12 +1,15 @@
-﻿using System;
+﻿using DotnetSpider;
+using System;
 
-namespace Spider
+namespace KekeSpider
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var spider = Spider.Create<GithubSpider>();
+            spider.RunAsync();
+            Console.Read();
         }
     }
 }
